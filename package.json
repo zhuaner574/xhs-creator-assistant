@@ -1,0 +1,22 @@
+{
+  "name": "xhs-hotword-bot",
+  "version": "1.0.0",
+  "description": "Xiaohongshu hotword and content idea generator",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "login": "node login.js",
+    "scrape": "node scrape.js",
+    "extract": "node ai-extract.js",
+    "ideas": "node idea-generate.js",
+    "daily": "node scrape.js && node ai-extract.js && node idea-generate.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "openai": "^6.35.0",
+    "playwright": "^1.59.1"
+  }
+}

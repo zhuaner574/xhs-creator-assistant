@@ -4,13 +4,16 @@
   "description": "Xiaohongshu hotword and content idea generator",
   "main": "index.js",
   "type": "commonjs",
-  "scripts": {
-    "login": "node login.js",
-    "scrape": "node scrape.js",
-    "extract": "node ai-extract.js",
-    "ideas": "node idea-generate.js",
-    "daily": "node scrape.js && node ai-extract.js && node idea-generate.js"
-  },
+"scripts": {
+  "login": "node login.js",
+  "scrape": "node scrape.js",
+  "extract": "node ai-extract.js",
+  "sync-hotwords": "node sync-hotwords.js",
+  "generate-daily": "node daily-generate.js",
+  "send-feishu": "node send-feishu.js",
+  "update-hotwords": "node scrape.js && node ai-extract.js && node sync-hotwords.js",
+  "daily-feishu": "node scrape.js && node ai-extract.js && node sync-hotwords.js && node daily-generate.js && node send-feishu.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
